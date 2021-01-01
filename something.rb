@@ -9,6 +9,7 @@ class Something < Formula
 
   def install
     system "make", "build"
+    bin.install "./dist/something"
   end
 
   test do
