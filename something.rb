@@ -13,6 +13,6 @@ class Something < Formula
   end
 
   test do
-    system "#{bin}/dist/something"
+    system "#{bin}/something"
   end
 end
