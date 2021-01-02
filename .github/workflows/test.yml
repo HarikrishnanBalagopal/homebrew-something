@@ -4,9 +4,11 @@ on: workflow_dispatch
 
 jobs:
   foo:
-    runs-on: macos-latest
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04, macos-10.15, macos-11.0]
+    runs-on: ${{ matrix.os }}
     steps:
       - run: pwd
       - run: ls -a
       - run: /usr/bin/env
-      - run: tree -a
