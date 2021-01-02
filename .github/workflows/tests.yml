@@ -22,15 +22,30 @@ jobs:
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ runner.os }}-rubygems-
 
+      - run: ls -a
+
       - name: Install Homebrew Bundler RubyGems
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
+      - run: ls -a
+
       - run: brew test-bot --only-cleanup-before
+
+      - run: ls -a
 
       - run: brew test-bot --only-setup
 
+      - run: ls -a
+
       - run: brew test-bot --only-tap-syntax
+
+      - run: ls -a
+
+      - run: brew test-bot --only-formulae
+        if: github.event_name == 'pull_request'
+
+      - run: ls -a
 
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
@@ -40,4 +55,6 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: bottles
-          path: '*.bottle.*'
+          path: "*.bottle.*"
+
+      - run: ls -a

@@ -1,0 +1,12 @@
+name: hhh
+
+on: workflow_dispatch
+
+jobs:
+  foo:
+    runs-on: macos-latest
+    steps:
+      - run: pwd
+      - run: ls -a
+      - run: /usr/bin/env
+      - run: tree -a
