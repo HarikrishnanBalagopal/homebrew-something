@@ -5,7 +5,7 @@ class Something < Formula
   head "https://github.com/HarikrishnanBalagopal/something.git"
 
   stable do
-    url "https://github.com/HarikrishnanBalagopal/something.git", using: :git, tag: "v0.1.2", revision: "b46ebcdd075552d3b7f143e7fafb8cf6d09d012b"
+    url "https://github.com/HarikrishnanBalagopal/something.git", using: :git, tag: "v0.1.3", revision: "8eaf3f5132f195df044ca754ad12d96a8751a26a"
   end
 
   bottle do
