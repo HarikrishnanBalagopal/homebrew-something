@@ -26,6 +26,7 @@ class Something < Formula
   end
 
   test do
+    # this is a test
     system "#{bin}/something"
   end
 end
