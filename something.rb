@@ -7,7 +7,7 @@ class Something < Formula
   stable do
   url "https://github.com/HarikrishnanBalagopal/something.git",
     using: :git,
-    tag: "v0.1.1"
+    tag: "v0.1.1",
     revision: "2a4a7c6f2428bdf33ad641b7d3ad46c8e63ea7a8"
   end
 
