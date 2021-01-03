@@ -9,10 +9,10 @@ class Something < Formula
   end
 
   bottle do
-    root_url "https://github.com/HarikrishnanBalagopal/homebrew-something/releases/download/something-0.1.0"
+    root_url "https://github.com/HarikrishnanBalagopal/homebrew-something/releases/download/something-0.1.1"
     cellar :any_skip_relocation
-    sha256 "50c6e9a212f77583d271ea920d71e53c47fa1fafee906044e9f4f9d27576a087" => :catalina
-    sha256 "efa255b273e89afe5fabb9298c1f5a702bd85402b6d31d322918f94143d297a9" => :x86_64_linux
+    sha256 "e5cbdfc539971244159da1dac42b73f48d38cfec27c96f82b9845dbc642fd73e" => :catalina
+    sha256 "590a7d08f8c97f2e30f4a10be0f6a1f584e1905ba07fc5f3da456f75b2a32a92" => :x86_64_linux
   end
 
   depends_on "go@1.15" => :build
